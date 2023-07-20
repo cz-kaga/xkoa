@@ -1,4 +1,8 @@
-package com.kcsoft.xkoa.pojo;
+/*
+ * Copyright (c) XUST-KCSOFT 2023 All rights reserved.
+ */
+
+package com.kcsoft.xkoa.pojo.organization;
 
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -16,18 +20,15 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Entity(name = "user")
-public class User {
+@Entity(name = "organization")
+public class Organization {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String username;
-    private String password;
-    private String phone;
-    private String email;
+    private String name;
+    private String description;
     @CreatedDate
     private Date gmtCreate;
     @LastModifiedDate
     private Date gmtModified;
-
 }
